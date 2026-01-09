@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11304.174 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEST", "SEST\SEST.csproj", "{CF0F0D1E-5EDB-4F19-BC1C-3A26255602C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OneTimePad", "OneTimePad\OneTimePad.csproj", "{2A3B25EF-F49E-4FDB-A02C-C21F29E88E8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testlernen", "Testlernen", "{0348B1CE-655E-43F9-92D6-835B48751F48}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1TestLernen", "1TestLernen\1TestLernen.csproj", "{09A1FB90-C166-4F43-8C19-A5BF1DB9E598}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileEncryptionWithAESAndDES", "FileEncryptionWithAESAndDES\FileEncryptionWithAESAndDES.csproj", "{4798EA6C-D7C4-463C-8CC0-44A15D516D74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaptureReplayAbwehren", "CaptureReplayAbwehren\CaptureReplayAbwehren.csproj", "{6A15E0D4-70E6-492B-B381-9D0C6C9EF305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSA Multi User Verschlüsselung", "RSA Multi User Verschlüsselung\RSA Multi User Verschlüsselung.csproj", "{0EE2C380-2213-40EC-AA83-13F0A8CE8AD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF0F0D1E-5EDB-4F19-BC1C-3A26255602C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF0F0D1E-5EDB-4F19-BC1C-3A26255602C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF0F0D1E-5EDB-4F19-BC1C-3A26255602C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF0F0D1E-5EDB-4F19-BC1C-3A26255602C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A3B25EF-F49E-4FDB-A02C-C21F29E88E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A3B25EF-F49E-4FDB-A02C-C21F29E88E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A3B25EF-F49E-4FDB-A02C-C21F29E88E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A3B25EF-F49E-4FDB-A02C-C21F29E88E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A1FB90-C166-4F43-8C19-A5BF1DB9E598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A1FB90-C166-4F43-8C19-A5BF1DB9E598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A1FB90-C166-4F43-8C19-A5BF1DB9E598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A1FB90-C166-4F43-8C19-A5BF1DB9E598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4798EA6C-D7C4-463C-8CC0-44A15D516D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4798EA6C-D7C4-463C-8CC0-44A15D516D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4798EA6C-D7C4-463C-8CC0-44A15D516D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4798EA6C-D7C4-463C-8CC0-44A15D516D74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A15E0D4-70E6-492B-B381-9D0C6C9EF305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A15E0D4-70E6-492B-B381-9D0C6C9EF305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A15E0D4-70E6-492B-B381-9D0C6C9EF305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A15E0D4-70E6-492B-B381-9D0C6C9EF305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE2C380-2213-40EC-AA83-13F0A8CE8AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE2C380-2213-40EC-AA83-13F0A8CE8AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE2C380-2213-40EC-AA83-13F0A8CE8AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE2C380-2213-40EC-AA83-13F0A8CE8AD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{09A1FB90-C166-4F43-8C19-A5BF1DB9E598} = {0348B1CE-655E-43F9-92D6-835B48751F48}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3C93239-EC71-46E4-BD93-15E0C3EA1411}
+	EndGlobalSection
+EndGlobal
