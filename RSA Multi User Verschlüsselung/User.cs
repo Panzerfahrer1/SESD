@@ -21,7 +21,7 @@ namespace RSA_Multi_User_Verschlüsselung
         public string? Username { get; set; }
         //This is the user Password, its not relevant for the encryting itself
         public string? PrivateKeyPassword { get; private set; }
-        public byte[]? PublicKey { get; private set; }
+        public byte[] PublicKey { get; private set; }
 
         private byte[] privateKey;
         private RSA rsa;
