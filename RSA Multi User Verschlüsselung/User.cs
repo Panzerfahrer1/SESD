@@ -86,5 +86,18 @@ namespace RSA_Multi_User_Verschlüsselung
                 throw new InvalidPasswordException("Password must contain a special character (not including '_')");
             }
         }
+
+        public void Receive(Message message)
+        {
+            byte[] aesKey;
+            byte[] iv;
+
+            aesKey = rsa.Decrypt(message.EncryptedAESKey, RSAEncryptionPadding.OaepSHA256);
+            iv = rsa.Decrypt(message.EncryptedAESIV, RSAEncryptionPadding.OaepSHA256);
+
+            string decryptedMessage = Encoding.UTF8.GetString(AES.Decrypt(Encoding.UTF8.GetBytes(message.EncryptedMessage), aesKey, iv));
+
+            Console.WriteLine(decryptedMessage);
+        }
     }
 }

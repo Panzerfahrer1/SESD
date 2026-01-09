@@ -2,11 +2,12 @@
 
 List<Message> log = new();
 
-try
-{
-    User user = new User("gvbhjk", "VHadswdad1!GJBK");
-} catch (InvalidPasswordException ex)
-{
-    Console.WriteLine(ex.Message);
-}
+User gunther = new User("gunther", "VHadswdad1!GJBK");
+User peter = new User("Peter", "HeuteIstEinTollerTag!1_");
 
+Message msg1 = new Message(gunther, peter);
+
+msg1.Send("Hallo Welt");
+peter.Receive(msg1);
+
+Console.WriteLine();

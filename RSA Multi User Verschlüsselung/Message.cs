@@ -9,7 +9,7 @@ using System.Net.Mail;
 
 namespace RSA_Multi_User_Verschlüsselung
 {
-    internal class Message
+    public class Message
     {
         public static List<Message> MessageLog = new List<Message>();
         public User Sender { get; set; }
@@ -33,41 +33,41 @@ namespace RSA_Multi_User_Verschlüsselung
         public void Send(string message)
         {
             byte[] byteMessage = Encoding.UTF8.GetBytes(message);
-            byte[] encryptedMessage = AES.Encrypt(byteMessage);
+            (byte[] encryptedMessage, byte[] key, byte[] iv) = AES.Encrypt(byteMessage);
 
             EncryptedMessage = Encoding.UTF8.GetString(encryptedMessage);
 
-            EncryptKey();
-            EncryptIV();
+            EncryptedAESIV = EncryptIvRsa(iv);
+            EncryptedAESKey = EncryptKeyRsa(key);
 
             MessageLog.Add(this);
+            Console.WriteLine();
         }
 
-        private void EncryptKey()
+        private byte[] EncryptKeyRsa(byte[] key)
         {
-            byte[] aesKey;
-
-            using (var aes = Aes.Create())
+            using (var rsa = RSA.Create())
             {
-                aes.GenerateKey();
+                rsa.ImportRSAPublicKey(Receiver.PublicKey, out _);
 
-                aesKey = aes.Key;
+                return rsa.Encrypt(
+                    key,
+                    RSAEncryptionPadding.OaepSHA256
+                );
             }
-
-            EncryptedAESKey = AES.Encrypt(aesKey, Receiver.PublicKey);
         }
 
-        private void EncryptIV()
+        private byte[] EncryptIvRsa(byte[] iv)
         {
-            byte[] aesIV;
-
-            using (var aes = Aes.Create())
+            using (var rsa = RSA.Create())
             {
-                aes.GenerateIV();
-                aesIV = aes.IV;
-            }
+                rsa.ImportRSAPublicKey(Receiver.PublicKey, out _);
 
-            EncryptedAESIV = AES.Encrypt(aesIV, Receiver.PublicKey);
+                return rsa.Encrypt(
+                    iv,
+                    RSAEncryptionPadding.OaepSHA256
+                );
+            }
         }
     }
 }
